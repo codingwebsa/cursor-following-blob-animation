@@ -1,56 +1,56 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
-    background-color: #101010;
-    height: 100vh;
-    overflow: hidden; 
+  background-color: #101010;
+  height: 100vh;
+  overflow: hidden;
+}
+
+@keyframes rotate {
+  from {
+    rotate: 0deg;
   }
-  
-  @keyframes rotate {
-    from {
-      rotate: 0deg;
-    }
-    
-    50% {
-      scale: 1 1.5;
-    }
-    
-    to {
-      rotate: 360deg;
-    }
+
+  50% {
+    scale: 1 1.5;
   }
-  @keyframes hue {
-    from {
-        filter: hue-rotate(0deg);
-    }
-    to {
-        filter: hue-rotate(360deg);
-    }
+
+  to {
+    rotate: 360deg;
   }
-  #blob {
-    background-color: white;
-    height: 34vmax;
-    /* height: 300px; */
-    aspect-ratio: 1;
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    translate: -50% -50%;
-    border-radius: 50%;
-    background: linear-gradient(to right, aquamarine, mediumpurple);
-    animation: rotate 20s infinite;
-    animation: hue 1 0s infinite;
-    opacity: 0.8;
+}
+@keyframes hue {
+  from {
+    filter: hue-rotate(0deg);
   }
-  
-  #blur {
-    height: 100%;
-    width: 100%;
-    position: absolute;
-    z-index: 2;
-    backdrop-filter: blur(12vmax);
+  to {
+    filter: hue-rotate(360deg);
   }
+}
+#blob {
+  background-color: white;
+  height: 34vmax;
+  /* height: 300px; */
+  aspect-ratio: 1;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  translate: -50% -50%;
+  border-radius: 50%;
+  background: linear-gradient(to right, aquamarine, mediumpurple);
+  animation: rotate 20s infinite;
+  animation: hue 10s infinite;
+  opacity: 0.8;
+}
+
+#blur {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  z-index: 2;
+  backdrop-filter: blur(12vmax);
+}
